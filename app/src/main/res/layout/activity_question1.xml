@@ -15,21 +15,45 @@
         android:id="@+id/text"
         android:textAlignment="center" />
 
-    <Button
+    <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="250dp"
         android:layout_marginTop="100dp"
+        android:id="@+id/yes1"
+
         android:text="Yes" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="100dp"
+        android:id="@+id/no1"
+        android:text="No" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/text"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="200dp"
-        android:text="No" />
+        android:layout_below="@+id/no1"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/back1"
+        android:text="Back" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/no1"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/next1"
+        android:text="Next" />
+
+
+
 
 
 </RelativeLayout>

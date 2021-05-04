@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         start = findViewById(R.id.start);
 
-        start.setOnClickListener(new View.OnClickListener() {
+        start.setOnClickListener(new View.OnClickListener()  {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"Start the questionnaire",Toast.LENGTH_SHORT).show();
