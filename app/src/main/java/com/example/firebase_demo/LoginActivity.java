@@ -34,11 +34,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        name = findViewById(R.id.name);
+        //name = findViewById(R.id.name);
         email = findViewById(R.id.email);
-        mobile = findViewById(R.id.mobile);
+        //mobile = findViewById(R.id.mobile);
         passwd = findViewById(R.id.password);
-
 
 
         login = findViewById(R.id.login);
@@ -58,15 +57,15 @@ public class LoginActivity extends AppCompatActivity {
                 String txt_passwd = passwd.getText().toString();
 
 
-                UserHelperClass helperClass = new UserHelperClass(txt_name,txt_mobile, txt_email,txt_passwd);
+                UserHelperClass helperClass = new UserHelperClass(txt_email,txt_passwd, txt_name, txt_mobile);
                 reference.child(txt_mobile).setValue(helperClass);
 
-                LoginUser(txt_name, txt_mobile,txt_email, txt_passwd);
+                LoginUser(txt_email, txt_passwd, txt_name,txt_mobile);
             }
         });
     }
         
-        private void LoginUser(String txt_name, String txt_mobile, String txt_email, String txt_passwd){
+        private void LoginUser(String txt_email, String txt_passwd, String txt_name, String txt_mobile){
         auth.signInWithEmailAndPassword(txt_email,txt_passwd).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {

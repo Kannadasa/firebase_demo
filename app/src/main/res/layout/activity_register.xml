@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:hint="email"
         android:id="@+id/email"
-        android:layout_below="@+id/name"
         android:layout_marginTop="50dp" />
 
     <EditText
@@ -30,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:layout_below="@id/mobile"
+        android:layout_below="@+id/password"
         android:id="@+id/register"
         android:text="Register" />
 

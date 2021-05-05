@@ -11,12 +11,18 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Question1Activity extends AppCompatActivity {
     
     private CheckBox yes1;
     private CheckBox no1;
     private Button back1;
     private Button next1;
+
+    FirebaseDatabase rootnode;
+    DatabaseReference reference;
 
     protected void onCreate(Bundle icicle){
         super.onCreate(icicle);
@@ -50,7 +56,7 @@ public class Question1Activity extends AppCompatActivity {
                   next1.setOnClickListener(new OnClickListener() {
                       @Override
                       public void onClick(View v) {
-                          startActivity(new Intent(Question1Activity.this, MainActivity.class));
+                          startActivity(new Intent(Question1Activity.this, Question2Activity.class));
                       }
                   });
               }
